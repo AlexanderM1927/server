@@ -1,7 +1,11 @@
 # SERVICES
 
-This repo includes services such as mysql, jenkins and nginx
+This repository was created with the goal of handle the services required to run external containers, for example the database image should be shared between the rest of the containers so it's include here.
 
-**THIS CONTAINER SHOULD BE FIRST.**
+_______________
+**Key commands:** 
 
-Then, create the databases you will need for the rest of containers
+docker-compose up -d --build --force-recreate --remove-orphans
+docker exec -it <container name> bash
+docker compose up
+docker system prune -a
