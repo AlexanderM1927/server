@@ -1,15 +1,5 @@
 version: "3.5"
 services:
-  services_nginx:
-    image: nginx:alpine
-    container_name: services_nginx
-    volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./nginx/certs:/etc/nginx/certs
-    networks:
-      - network_services
-    ports:
-      - "80:80"
 
   db:
     image: mysql:8
