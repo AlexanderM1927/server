@@ -11,15 +11,11 @@ services:
     networks:
       - network_services
 
-  jenkins:
-    image: jenkins/jenkins:lts
-    privileged: true
-    user: root
+  adminer:
+    image: adminer
+    restart: always
     ports:
       - 8080:8080
-    container_name: jenkins
-    volumes:
-      - /home/${myname}/jenkins_compose/jenkins_configuration:/var/jenkins_home
     networks:
       - network_services
 
